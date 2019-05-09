@@ -6,17 +6,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="mainPane" fx:controller="com.abedafnan.mainController" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="customersMainPane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abedafnan.customers.CustomersMainController">
    <children>
-      <Label text="Main Menu">
+      <Label text="Manage Customers Menu">
          <font>
-            <Font name="Times New Roman" size="40.0" />
+            <Font name="Times New Roman" size="30.0" />
          </font>
          <VBox.margin>
             <Insets bottom="10.0" top="10.0" />
          </VBox.margin>
       </Label>
-      <Button fx:id="productsButton" onAction="#onProductsButtonPress" mnemonicParsing="false" prefWidth="200.0" text="Manage Products">
+      <Button fx:id="addCustomersButton" mnemonicParsing="false" onAction="#addCustomer" prefWidth="200.0" text="Add Customer">
          <font>
             <Font name="Traditional Arabic Bold" size="16.0" />
          </font>
@@ -24,7 +24,7 @@
             <Insets bottom="10.0" top="10.0" />
          </VBox.margin>
       </Button>
-      <Button fx:id="customersButton" onAction="#onCustomersButtonPress" mnemonicParsing="false" prefWidth="200.0" text="Manage Customers">
+      <Button fx:id="updateCustomersButton" mnemonicParsing="false" onAction="#updateCustomer" prefWidth="200.0" text="Update Customer">
          <font>
             <Font name="Traditional Arabic Bold" size="16.0" />
          </font>
@@ -32,7 +32,7 @@
             <Insets bottom="10.0" top="10.0" />
          </VBox.margin>
       </Button>
-      <Button fx:id="ordersButton" onAction="#onOrdersButtonPress" mnemonicParsing="false" prefWidth="200.0" text="Manage Orders">
+      <Button fx:id="deleteCustomersButton" mnemonicParsing="false" onAction="#deleteCustomer" prefWidth="200.0" text="Delete Customer">
           <font>
               <Font name="Traditional Arabic Bold" size="16.0" />
           </font>
@@ -40,10 +40,10 @@
             <Insets bottom="10.0" top="10.0" />
          </VBox.margin>
       </Button>
-      <Button fx:id="logoutButton" onAction="#onLogoutButtonPress" mnemonicParsing="false" prefWidth="200.0" text="Logout">
-          <font>
-              <Font name="Traditional Arabic Bold" size="16.0" />
-          </font>
+      <Button fx:id="menuCustomersButton" layoutX="110.0" layoutY="247.0" mnemonicParsing="false" onAction="#backToMainMenu" prefWidth="200.0" text="Main Menu">
+         <font>
+            <Font name="Traditional Arabic Bold" size="16.0" />
+         </font>
          <VBox.margin>
             <Insets bottom="10.0" top="10.0" />
          </VBox.margin>
