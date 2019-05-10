@@ -1,6 +1,7 @@
 package com.abedafnan;
 
-import com.abedafnan.db.DBConnection;
+import com.abedafnan.utils.DBConnection;
+import com.abedafnan.utils.Helper;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -31,7 +32,7 @@ public class LoginController {
 
     public void login() {
         // Check if the fields are empty
-        if (!areEmpty()) {
+        if (!areFull()) {
             return;
         }
 
@@ -53,9 +54,8 @@ public class LoginController {
     }
 
     private void continueToNextPage() {
-        Stage stage = (Stage) mainPanel.getScene().getWindow();
-        stage.setTitle("Main");
-        stage.setScene(loadScene("main.fxml"));
+        Helper helper = Helper.getHelper();
+        helper.moveTo(mainPanel, "Main Menu", "../main.fxml");
     }
 
     public void cancel() {
@@ -71,11 +71,11 @@ public class LoginController {
         dbConnection = DBConnection.getDbConnection();
         try {
             statement = dbConnection.createStatement();
-            String query = "SELECT * FROM users WHERE email = '" + username + "'";
+            String query = "SELECT * FROM users WHERE name = '" + username + "'";
             ResultSet resultSet = statement.executeQuery(query);
 
             if (resultSet.next()) {
-                String name = resultSet.getString("email");
+                String name = resultSet.getString("name");
                 String password = resultSet.getString("password");
                 errorLabel.setText("");
                 loginInfo = name + " " + password;
@@ -94,7 +94,7 @@ public class LoginController {
     /**
      * @return true if all fields are filled
      */
-    private boolean areEmpty() {
+    private boolean areFull() {
         if (nameField.getText().equals("")) {
             errorLabel.setText("You must enter values");
             return false;
@@ -105,21 +105,4 @@ public class LoginController {
         return true;
     }
 
-    /**
-     * @param resource of the fxml file to be loaded
-     * @return the new scene to be displayed
-     */
-    private Scene loadScene(String resource) {
-        Scene scene = null;
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
-            Parent parent = loader.load();
-            scene = new Scene(parent);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return scene;
-    }
 }

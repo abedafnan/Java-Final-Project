@@ -1,5 +1,6 @@
 package com.abedafnan;
 
+import com.abedafnan.utils.Helper;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -23,45 +24,23 @@ public class mainController {
     Button logoutButton;
 
     public void onProductsButtonPress() {
-        Stage stage = (Stage) mainPane.getScene().getWindow();
-        stage.setTitle("Manage Products");
-        stage.setScene(loadScene("products/products_main.fxml"));
+        Helper helper = Helper.getHelper();
+        helper.moveTo(mainPane, "Manage Products", "../products/products_main.fxml");
     }
 
     public void onCustomersButtonPress() {
-        Stage stage = (Stage) mainPane.getScene().getWindow();
-        stage.setTitle("Manage Customers");
-        stage.setScene(loadScene("customers/customers_main.fxml"));
+        Helper helper = Helper.getHelper();
+        helper.moveTo(mainPane, "Manage Customers", "../customers/customers_main.fxml");
     }
 
     public void onOrdersButtonPress() {
-        Stage stage = (Stage) mainPane.getScene().getWindow();
-        stage.setTitle("Manage Orders");
-        stage.setScene(loadScene("orders/orders_main.fxml"));
+        Helper helper = Helper.getHelper();
+        helper.moveTo(mainPane, "Manage Orders", "../orders/orders_main.fxml");
     }
 
     public void onLogoutButtonPress() {
-        Stage stage = (Stage) mainPane.getScene().getWindow();
-        stage.setTitle("Login");
-        stage.setScene(loadScene("login.fxml"));
-    }
-
-    /**
-     * @param resource of the fxml file to be loaded
-     * @return the new scene to be displayed
-     */
-    public Scene loadScene(String resource) {
-        Scene scene = null;
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
-            Parent parent = loader.load();
-            scene = new Scene(parent);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return scene;
+        Helper helper = Helper.getHelper();
+        helper.moveTo(mainPane, "Login", "../login.fxml");
     }
 
 }

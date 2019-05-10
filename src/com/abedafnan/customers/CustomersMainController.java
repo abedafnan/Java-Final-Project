@@ -1,16 +1,12 @@
 package com.abedafnan.customers;
 
+import com.abedafnan.utils.Helper;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class CustomersMainController {
+    Helper helper;
     @FXML
     VBox customersMainPane;
     @FXML
@@ -23,38 +19,23 @@ public class CustomersMainController {
     Button menuCustomersButton;
 
     public void addCustomer() {
-
+        helper = Helper.getHelper();
+        helper.moveTo(customersMainPane, "Add Customer", "../customers/customer_add.fxml");
     }
 
     public void updateCustomer() {
-
+        helper = Helper.getHelper();
+        helper.moveTo(customersMainPane, "Update Customer", "../customers/customer_update.fxml");
     }
 
     public void deleteCustomer() {
-
+        helper = Helper.getHelper();
+        helper.moveTo(customersMainPane, "Delete Customer", "../customers/customer_delete.fxml");
     }
 
     public void backToMainMenu() {
-        Stage stage = (Stage) customersMainPane.getScene().getWindow();
-        stage.setTitle("Main Menu");
-        stage.setScene(loadScene("../main.fxml"));
+        helper = Helper.getHelper();
+        helper.moveTo(customersMainPane, "Main Menu", "../main.fxml");
     }
 
-    /**
-     * @param resource of the fxml file to be loaded
-     * @return the new scene to be displayed
-     */
-    public Scene loadScene(String resource) {
-        Scene scene = null;
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
-            Parent parent = loader.load();
-            scene = new Scene(parent);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return scene;
-    }
 }

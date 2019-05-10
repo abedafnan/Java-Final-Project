@@ -1,9 +1,6 @@
-package com.abedafnan.db;
+package com.abedafnan.utils;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class DBConnection {
     private Connection connection;
@@ -22,7 +19,7 @@ public class DBConnection {
     public Statement createStatement() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/users";
+            String url = "jdbc:mysql://localhost:3306/customerorder";
             connection = DriverManager.getConnection(url, "root", "root");
             statement = connection.createStatement();
         } catch (ClassNotFoundException | SQLException e) {
@@ -40,4 +37,5 @@ public class DBConnection {
         }
 
     }
+
 }
