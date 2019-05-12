@@ -1,4 +1,4 @@
-package com.abedafnan.customers;
+package com.abedafnan.products;
 
 import com.abedafnan.models.Product;
 import com.abedafnan.utils.DBConnection;

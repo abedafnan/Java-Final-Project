@@ -22,24 +22,25 @@ public class mainController {
     Button customersButton;
     @FXML
     Button logoutButton;
+    Helper helper;
 
     public void onProductsButtonPress() {
-        Helper helper = Helper.getHelper();
+        helper = Helper.getHelper();
         helper.moveTo(mainPane, "Manage Products", "../products/products_main.fxml");
     }
 
     public void onCustomersButtonPress() {
-        Helper helper = Helper.getHelper();
+        helper = Helper.getHelper();
         helper.moveTo(mainPane, "Manage Customers", "../customers/customers_main.fxml");
     }
 
     public void onOrdersButtonPress() {
-        Helper helper = Helper.getHelper();
+        helper = Helper.getHelper();
         helper.moveTo(mainPane, "Manage Orders", "../orders/orders_main.fxml");
     }
 
     public void onLogoutButtonPress() {
-        Helper helper = Helper.getHelper();
+        helper = Helper.getHelper();
         helper.moveTo(mainPane, "Login", "../login.fxml");
     }
 

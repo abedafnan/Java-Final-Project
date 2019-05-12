@@ -46,4 +46,9 @@ public class Customer {
     public String getGender() {
         return gender;
     }
+
+    @Override
+    public String toString() {
+        return id + " - " + firstName + " " + lastName;
+    }
 }
