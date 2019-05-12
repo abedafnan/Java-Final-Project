@@ -70,7 +70,9 @@ public class ProductsAddController {
             statement.execute(query);
             JOptionPane.showMessageDialog(null,
                     "Successfully inserted a new product", "Success", JOptionPane.INFORMATION_MESSAGE);
-            cancel();
+
+            Helper helper = Helper.getHelper();
+            helper.writeIntoLog("Inserted a new product customer with the name " + name);
 
         } catch (SQLException ex) {
             System.out.println("Error when inserting product");

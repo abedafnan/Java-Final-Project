@@ -1,0 +1,6 @@
+2019/05/12 22:03:45 - Inserted a new customer with the id
+4292019/05/12 22:05:33 - Updated the customer with id 111
+2019/05/12 22:25:04 - Retrieved the login info for the user named afnan
+2019/05/12 22:25:20 - Retrieved all orders from the database
+2019/05/12 22:25:39 - Getting products of the category 'Electronics'
+2019/05/12 22:26:11 - Retrieved all products from the database

@@ -86,11 +86,15 @@ public class ProductsUpdateController {
         DBConnection dbConnection = DBConnection.getDbConnection();
         Statement statement = dbConnection.createStatement();
         try {
+            int id = selected.getId();
             String query = "UPDATE products SET name='" + name + "', category='" + category + "', quantity='" + quantity
-                    + "', price='" + price + "', description='" + desc + "' WHERE id='" + selected.getId() + "'";
+                    + "', price='" + price + "', description='" + desc + "' WHERE id='" + id + "'";
             statement.execute(query);
             JOptionPane.showMessageDialog(null,
                     "Successfully Updated", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+            Helper helper = Helper.getHelper();
+            helper.writeIntoLog("Updated the product with the id " + id);
 
         } catch (SQLException ex) {
             System.out.println("Error when updating product");
@@ -136,6 +140,9 @@ public class ProductsUpdateController {
                 );
                 products.add(customer);
             }
+
+            Helper helper = Helper.getHelper();
+            helper.writeIntoLog("Retrieved all products from the database");
             return products;
 
         } catch (SQLException e) {

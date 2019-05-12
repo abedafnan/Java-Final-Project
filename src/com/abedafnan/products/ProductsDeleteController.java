@@ -56,10 +56,14 @@ public class ProductsDeleteController {
         DBConnection connection = DBConnection.getDbConnection();
         Statement statement = connection.createStatement();
         try {
-            String query = "DELETE FROM products WHERE id='" + product.getId() + "'";
+            int id = product.getId();
+            String query = "DELETE FROM products WHERE id='" + id + "'";
             statement.execute(query);
             JOptionPane.showMessageDialog(null,
                     "Customer Successfully Deleted", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+            Helper helper = Helper.getHelper();
+            helper.writeIntoLog("Deleted the customer with id " + id);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -98,6 +102,9 @@ public class ProductsDeleteController {
                 );
                 products.add(customer);
             }
+
+            Helper helper = Helper.getHelper();
+            helper.writeIntoLog("Retrieved all products from the database");
             return products;
 
         } catch (SQLException e) {

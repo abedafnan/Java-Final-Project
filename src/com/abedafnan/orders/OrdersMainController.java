@@ -101,6 +101,10 @@ public class OrdersMainController {
             statement.execute(query);
             JOptionPane.showMessageDialog(null,
                     "Order Successfully Added", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+            Helper helper = Helper.getHelper();
+            helper.writeIntoLog("Inserted a new order for customer with the id " + cusID + " product " + prodID);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -174,6 +178,9 @@ public class OrdersMainController {
                 Order order = new Order(customer, product, date, quantity, price, totalPrice);
                 orders.add(order);
             }
+
+            Helper helper = Helper.getHelper();
+            helper.writeIntoLog("Retrieved all orders from the database");
             return orders;
 
         } catch (SQLException e) {

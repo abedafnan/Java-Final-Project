@@ -83,6 +83,9 @@ public class LoginController {
                 errorLabel.setText("Username doesn't exist");
             }
 
+            Helper helper = Helper.getHelper();
+            helper.writeIntoLog("Retrieved the login info for the user named " + username);
+
         } catch (SQLException ex) {
             System.out.println("Error in Query!");
             ex.printStackTrace();

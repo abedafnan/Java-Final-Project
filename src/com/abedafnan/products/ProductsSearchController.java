@@ -76,6 +76,9 @@ public class ProductsSearchController {
                 );
                 products.add(customer);
             }
+
+            Helper helper = Helper.getHelper();
+            helper.writeIntoLog("Getting products of the category '" + selection + "'");
             return products;
 
         } catch (SQLException e) {

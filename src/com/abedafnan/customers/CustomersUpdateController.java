@@ -67,6 +67,9 @@ public class CustomersUpdateController {
                 );
                 fillFields(customer);
 
+                Helper helper = Helper.getHelper();
+                helper.writeIntoLog("Retrieved the customer with id " + searchID);
+
             } else {
                 JOptionPane.showMessageDialog(null,
                         "Customer doesn't exist", "Customer Not Found", JOptionPane.WARNING_MESSAGE);
@@ -128,7 +131,9 @@ public class CustomersUpdateController {
             statement.execute(query);
             JOptionPane.showMessageDialog(null,
                     "Successfully Updated", "Success", JOptionPane.INFORMATION_MESSAGE);
-            cancel();
+
+            Helper helper = Helper.getHelper();
+            helper.writeIntoLog("Updated the customer with id " + id);
 
         } catch (SQLException ex) {
             System.out.println("Error when updating customer");

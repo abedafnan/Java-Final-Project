@@ -62,10 +62,14 @@ public class CustomersDeleteController {
         DBConnection connection = DBConnection.getDbConnection();
         Statement statement = connection.createStatement();
         try {
-            String query = "DELETE FROM customers WHERE id='" + customer.getId() + "'";
+            int id = customer.getId();
+            String query = "DELETE FROM customers WHERE id='" + id + "'";
             statement.execute(query);
             JOptionPane.showMessageDialog(null,
                     "Customer Successfully Deleted", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+            Helper helper = Helper.getHelper();
+            helper.writeIntoLog("Deleted the customer with id " + id);
 
         } catch (SQLException e) {
             e.printStackTrace();
