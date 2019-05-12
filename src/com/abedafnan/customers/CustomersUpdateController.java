@@ -99,7 +99,6 @@ public class CustomersUpdateController {
             return;
         }
 
-        dbConnection = DBConnection.getDbConnection();
         try {
             if (areFull()) {
                 int id = Integer.parseInt(idField.getText());
@@ -123,10 +122,6 @@ public class CustomersUpdateController {
         dbConnection = DBConnection.getDbConnection();
         statement = dbConnection.createStatement();
         try {
-            /*
-            UPDATE customers SET id = 123, firstName = "aaa", lastName = "bbb", mobile = 12345, email = "any@email.com",
-address = "anyAddress", gender = "male" WHERE id = 123;
-             */
             String query = "UPDATE customers SET id='" + id + "', firstName='" + fn + "', lastName='" + ln + "', mobile='"
                     + mob + "', email='" + email + "', address='" + addrs + "',gender='" + gender
                     + "' WHERE id='" + searchField.getText() + "'";
