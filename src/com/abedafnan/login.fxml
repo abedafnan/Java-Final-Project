@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -49,10 +50,10 @@
                     <Font name="System Bold" size="12.0" />
                 </font></Label>
             <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="passField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <PasswordField fx:id="passField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <Button mnemonicParsing="false" onAction="#login" prefWidth="60.0" text="OK">
+                  <Button mnemonicParsing="false" onAction="#login" prefWidth="80.0" text="OK">
                       <font>
                           <Font name="System Bold" size="12.0" />
                       </font>
@@ -60,7 +61,7 @@
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#cancel" prefWidth="60.0" text="Cancel">
+                  <Button mnemonicParsing="false" onAction="#cancel" prefWidth="80.0" text="Cancel">
                    <font>
                        <Font name="System Bold" size="12.0" />
                    </font></Button>

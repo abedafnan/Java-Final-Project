@@ -4,6 +4,7 @@ import com.abedafnan.utils.DBConnection;
 import com.abedafnan.utils.Helper;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -19,7 +20,7 @@ public class LoginController {
     @FXML
     TextField nameField;
     @FXML
-    TextField passField;
+    PasswordField passField;
     @FXML
     Label errorLabel;
     @FXML

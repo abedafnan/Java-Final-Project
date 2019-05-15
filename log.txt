@@ -28,3 +28,22 @@
 2019/05/15 19:29:13 - Retrieved the login info for the user named afnan
 2019/05/15 19:29:17 - Retrieved all products from the database
 2019/05/15 19:29:35 - Retrieved all products from the database
+2019/05/15 20:05:12 - Retrieved the login info for the user named afnan
+2019/05/15 20:05:28 - Retrieved the login info for the user named afnan
+2019/05/15 20:06:38 - Inserted a new product customer with the name Phone
+2019/05/15 20:06:56 - Retrieved all products from the database
+2019/05/15 20:08:13 - Updated the product with the id 4
+2019/05/15 20:08:14 - Retrieved all products from the database
+2019/05/15 20:08:28 - Retrieved all products from the database
+2019/05/15 20:09:00 - Getting products of the category 'Electronics'
+2019/05/15 20:09:07 - Getting products of the category 'Furniture'
+2019/05/15 20:09:11 - Getting products of the category 'Clothing'
+2019/05/15 20:10:22 - Retrieved the customer with id 123
+2019/05/15 20:10:39 - Updated the customer with id 123
+2019/05/15 20:13:16 - Inserted a new customer with the id 222
+2019/05/15 20:13:33 - Retrieved the customer with id 222
+2019/05/15 20:13:40 - Retrieved all orders from the database
+2019/05/15 20:14:42 - Inserted a new order for customer with the id 222 product 7
+2019/05/15 20:14:45 - Retrieved all orders from the database
+2019/05/15 20:15:46 - Inserted a new order for customer with the id 123 product 1
+2019/05/15 20:15:48 - Retrieved all orders from the database
