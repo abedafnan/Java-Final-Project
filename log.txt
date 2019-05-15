@@ -1,6 +1,30 @@
-2019/05/12 22:03:45 - Inserted a new customer with the id
-4292019/05/12 22:05:33 - Updated the customer with id 111
+2019/05/12 22:03:45 - Inserted a new customer with the id 429
+2019/05/12 22:05:33 - Updated the customer with id 111
 2019/05/12 22:25:04 - Retrieved the login info for the user named afnan
 2019/05/12 22:25:20 - Retrieved all orders from the database
 2019/05/12 22:25:39 - Getting products of the category 'Electronics'
 2019/05/12 22:26:11 - Retrieved all products from the database
+2019/05/14 22:48:26 - Retrieved the login info for the user named afnan
+2019/05/14 22:50:06 - Retrieved all products from the database
+2019/05/14 22:50:13 - Retrieved all products from the database
+2019/05/14 22:50:23 - Retrieved all products from the database
+2019/05/14 22:50:36 - Retrieved all products from the database
+2019/05/14 22:51:01 - Retrieved all orders from the database
+2019/05/14 22:51:10 - Retrieved all orders from the database
+2019/05/14 22:51:25 - Retrieved all products from the database
+2019/05/14 22:53:01 - Retrieved the login info for the user named afnan
+2019/05/14 22:53:03 - Retrieved all orders from the database
+2019/05/14 22:59:37 - Retrieved the login info for the user named afnan
+2019/05/14 22:59:39 - Retrieved all orders from the database
+2019/05/14 23:03:46 - Retrieved the login info for the user named afnan
+2019/05/14 23:03:51 - Retrieved all orders from the database
+2019/05/14 23:09:04 - Retrieved the login info for the user named afnan
+2019/05/14 23:09:05 - Retrieved all orders from the database
+2019/05/14 23:09:17 - Retrieved all products from the database
+2019/05/14 23:09:32 - Retrieved all products from the database
+2019/05/14 23:09:38 - Retrieved all products from the database
+2019/05/14 23:15:31 - Retrieved the login info for the user named afnan
+2019/05/14 23:16:04 - Retrieved all products from the database
+2019/05/15 19:29:13 - Retrieved the login info for the user named afnan
+2019/05/15 19:29:17 - Retrieved all products from the database
+2019/05/15 19:29:35 - Retrieved all products from the database

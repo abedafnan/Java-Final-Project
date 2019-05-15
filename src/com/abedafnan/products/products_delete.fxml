@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="productsDeletePane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abedafnan.products.ProductsDeleteController">
+<VBox fx:id="productsDeletePane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: lightgray; -fx-border-color: white; -fx-border-width: 10;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abedafnan.products.ProductsDeleteController">
    <children>
        <Label text="Delete Product">
            <font>
@@ -21,14 +21,14 @@
        </Label>
        <TableView fx:id="productsTable" prefHeight="200.0" prefWidth="200.0">
            <columns>
-               <TableColumn fx:id="nameCol" prefWidth="87.0" text="Name"/>
-               <TableColumn fx:id="catCol" prefWidth="96.0" text="Category"/>
-               <TableColumn fx:id="quantCol" prefWidth="82.0" text="Quantity"/>
-               <TableColumn fx:id="priceCol" minWidth="0.0" prefWidth="75.0" text="Price"/>
-               <TableColumn fx:id="descCol" prefWidth="138.0" text="Description"/>
+               <TableColumn fx:id="nameCol" prefWidth="87.0" text="Name" />
+               <TableColumn fx:id="catCol" prefWidth="96.0" text="Category" />
+               <TableColumn fx:id="quantCol" prefWidth="82.0" text="Quantity" />
+               <TableColumn fx:id="priceCol" minWidth="0.0" prefWidth="75.0" text="Price" />
+               <TableColumn fx:id="descCol" prefWidth="138.0" text="Description" />
            </columns>
            <VBox.margin>
-               <Insets left="15.0" right="15.0"/>
+               <Insets left="15.0" right="15.0" />
          </VBox.margin>
       </TableView>
       <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
@@ -58,6 +58,9 @@
                  </font>
              </Button>
          </children>
+         <VBox.margin>
+            <Insets right="5.0" />
+         </VBox.margin>
       </HBox>
    </children>
 </VBox>

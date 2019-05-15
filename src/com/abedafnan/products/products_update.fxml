@@ -16,49 +16,49 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="productsUpdatePane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abedafnan.products.ProductsUpdateController">
+<VBox fx:id="productsUpdatePane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="450.0" style="-fx-background-color: lightgray; -fx-border-color: white; -fx-border-width: 10;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abedafnan.products.ProductsUpdateController">
     <children>
         <Label text="Update Product">
             <font>
                 <Font name="Serif Regular" size="25.0" />
             </font>
             <VBox.margin>
-                <Insets bottom="20.0" top="20.0" />
+                <Insets bottom="15.0" top="15.0" />
             </VBox.margin>
         </Label>
-        <TableView fx:id="productsTable" prefHeight="140.0" prefWidth="200.0">
+        <TableView fx:id="productsTable" prefHeight="120.0" prefWidth="200.0">
             <columns>
                 <TableColumn fx:id="nameCol" prefWidth="87.0" text="Name" />
                 <TableColumn fx:id="catCol" prefWidth="82.0" text="Category" />
                 <TableColumn fx:id="quantCol" prefWidth="84.0" text="Quantity" />
                 <TableColumn fx:id="priceCol" minWidth="0.0" prefWidth="68.0" text="Price" />
-                <TableColumn fx:id="descCol" prefWidth="100.0" text="Description" />
+                <TableColumn fx:id="descCol" text="Description" />
             </columns>
             <VBox.margin>
                 <Insets left="15.0" right="15.0" />
             </VBox.margin>
         </TableView>
-        <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="200.0">
+        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0">
             <children>
-                <Button mnemonicParsing="false" onAction="#updateProduct" prefWidth="80.0" text="Update">
+                <Button mnemonicParsing="false" onAction="#updateProduct" prefWidth="130.0" text="Update">
                     <HBox.margin>
-                        <Insets right="10.0" />
+                        <Insets />
                     </HBox.margin>
                     <font>
                         <Font name="Serif Regular" size="13.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#refresh" prefWidth="80.0" text="Refresh">
+                <Button mnemonicParsing="false" onAction="#refresh" prefWidth="130.0" text="Refresh">
                     <HBox.margin>
-                        <Insets right="10.0" />
+                        <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <font>
                         <Font name="Serif Regular" size="13.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#cancel" prefWidth="80.0" text="Cancel">
+                <Button mnemonicParsing="false" onAction="#cancel" prefWidth="130.0" text="Cancel">
                     <HBox.margin>
-                        <Insets right="10.0" />
+                        <Insets />
                     </HBox.margin>
                     <font>
                         <Font name="Serif Regular" size="13.0" />
@@ -66,10 +66,10 @@
                 </Button>
             </children>
             <VBox.margin>
-                <Insets left="20.0" right="20.0" />
+                <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
             </VBox.margin>
         </HBox>
-        <GridPane prefWidth="357.0" vgap="10.0">
+        <GridPane prefWidth="357.0" style="-fx-background-color: white;" vgap="10.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="122.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="218.0" />
@@ -82,7 +82,7 @@
                 <RowConstraints minHeight="70.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <VBox.margin>
-                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                <Insets left="15.0" right="15.0" />
             </VBox.margin>
             <children>
                 <Label text="Name">
@@ -133,13 +133,22 @@
                 </HBox>
             </children>
             <padding>
-                <Insets left="20.0" right="20.0" />
+                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
             </padding>
         </GridPane>
-      <Button alignment="CENTER" mnemonicParsing="false" onAction="#confirmUpdate" prefWidth="80.0" text="Confirm" textAlignment="CENTER">
+        <HBox alignment="CENTER_RIGHT">
+            
+      <Button alignment="CENTER" mnemonicParsing="false" onAction="#confirmUpdate" prefWidth="130.0" text="Confirm" textAlignment="CENTER">
         <font>
             <Font name="Serif Regular" size="13.0" />
         </font>
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
       </Button>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" top="10.0" />
+         </VBox.margin>
+        </HBox>
     </children>
 </VBox>

@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="productsAddPane" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abedafnan.products.ProductsAddController">
+<VBox fx:id="productsAddPane" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="400.0" style="-fx-background-color: lightgray; -fx-border-color: white; -fx-border-width: 10;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abedafnan.products.ProductsAddController">
    <children>
       <Label text="Add Product">
          <font>
@@ -95,7 +95,7 @@
            <children>
                <Button mnemonicParsing="false" onAction="#addProduct" prefWidth="80.0" text="Add">
                    <HBox.margin>
-                       <Insets right="10.0" />
+                       <Insets left="10.0" right="20.0" />
                    </HBox.margin>
                    <font>
                        <Font name="Serif Regular" size="13.0" />
@@ -103,7 +103,7 @@
                </Button>
                <Button mnemonicParsing="false" onAction="#cancel" prefWidth="80.0" text="Cancel">
                    <HBox.margin>
-                       <Insets left="10.0" right="10.0" />
+                       <Insets left="20.0" right="10.0" />
                    </HBox.margin>
                    <font>
                        <Font name="Serif Regular" size="13.0" />

@@ -3,15 +3,12 @@ package com.abedafnan;
 import com.abedafnan.utils.DBConnection;
 import com.abedafnan.utils.Helper;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -25,10 +22,23 @@ public class LoginController {
     TextField passField;
     @FXML
     Label errorLabel;
+    @FXML
+    ImageView imageView;
     private DBConnection dbConnection;
     private Statement statement;
     private String loginInfo;
     private String[] infoArray;
+
+    @FXML
+    public void initialize() {
+        try {
+            Image image = new Image("/resources/login.png");
+            imageView.setImage(image);
+            imageView.setCache(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public void login() {
         // Check if the fields are empty

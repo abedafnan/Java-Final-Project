@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="customersDeletePane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abedafnan.customers.CustomersDeleteController">
+<VBox fx:id="customersDeletePane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="550.0" style="-fx-background-color: lightgray; -fx-border-color: white; -fx-border-width: 10;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abedafnan.customers.CustomersDeleteController">
    <children>
        <Label text="Delete Customer">
            <font>
@@ -22,12 +22,12 @@
       <TableView fx:id="customersTable" prefHeight="200.0" prefWidth="200.0">
         <columns>
           <TableColumn fx:id="idCol" prefWidth="41.0" text="ID" />
-          <TableColumn fx:id="fnameCol" prefWidth="81.0" text="FirstName" />
-            <TableColumn fx:id="lnameCol" prefWidth="78.0" text="LastName" />
-            <TableColumn fx:id="mobileCol" prefWidth="93.0" text="Mobile" />
-            <TableColumn fx:id="emailCol" prefWidth="87.0" text="Email" />
-            <TableColumn fx:id="addressCol" minWidth="0.0" prefWidth="85.0" text="Address" />
-            <TableColumn fx:id="genderCol" minWidth="5.0" prefWidth="54.0" text="Gender" />
+          <TableColumn fx:id="fnameCol" prefWidth="71.0" text="FirstName" />
+            <TableColumn fx:id="lnameCol" prefWidth="71.0" text="LastName" />
+            <TableColumn fx:id="mobileCol" prefWidth="91.0" text="Mobile" />
+            <TableColumn fx:id="emailCol" prefWidth="95.0" text="Email" />
+            <TableColumn fx:id="addressCol" minWidth="0.0" prefWidth="73.0" text="Address" />
+            <TableColumn fx:id="genderCol" minWidth="5.0" prefWidth="57.0" text="Gender" />
         </columns>
          <VBox.margin>
             <Insets left="15.0" right="15.0" />
@@ -60,6 +60,9 @@
                  </font>
              </Button>
          </children>
+         <VBox.margin>
+            <Insets right="5.0" />
+         </VBox.margin>
       </HBox>
    </children>
 </VBox>

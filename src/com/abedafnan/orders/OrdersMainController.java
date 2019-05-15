@@ -63,6 +63,9 @@ public class OrdersMainController {
     }
 
     private void prepareComboBoxes() {
+        productsCombo.setPromptText("Select Product..");
+        customersCombo.setPromptText("Select Customer..");
+
         ObservableList<Product> products = getProductsFromDB();
         products.forEach(product -> productsCombo.getItems().add(product));
         ObservableList<Customer> customers = getCustomersFromDB();
@@ -142,7 +145,7 @@ public class OrdersMainController {
      */
     private boolean areFull() {
         if (productsCombo.getSelectionModel().getSelectedItem() == null ||
-                productsCombo.getSelectionModel().getSelectedItem() == null) {
+                customersCombo.getSelectionModel().getSelectedItem() == null) {
             JOptionPane.showMessageDialog(null, "Make sure you've selected " +
                     "the customer and the product", "No selection", JOptionPane.WARNING_MESSAGE);
             return false;
